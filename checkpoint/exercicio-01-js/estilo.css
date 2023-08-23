@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #464343
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 0;
+    background-color: #fd3300;
+    padding: 25px;
+    color: #0a0a0a;
+}
+
+#tarefa {
+    text-align: left;
+}
+
+#textoTarefa{
+    padding: 5px;
+    color: #000000;
+}
+
+#inputTarefa{
+    text-align: center;
+    color: #2f0058;
+    background-color: #ffffff;
+}
+
+#listaTarefas{
+    padding: 5px;
+    color: #000000;
+}
