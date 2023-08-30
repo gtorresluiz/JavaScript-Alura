@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #464343
+    background-color: #ffffff
 }
 
 h1 {
@@ -32,4 +32,16 @@ h1 {
 #listaTarefas{
     padding: 5px;
     color: #000000;
+}
+
+.botao-excluir {
+    background-color: #ff0000;
+    color: #ffffff;
+    margin-left: 2%;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.botao-excluir:hover {
+    background-color: #cc0000;
 }

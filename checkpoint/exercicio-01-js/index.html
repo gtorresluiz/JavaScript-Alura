@@ -10,9 +10,10 @@
    <h1>Lista de Tarefas</h1>
     <form id="tarefa">
         <input type="text" id="inputTarefa" placeholder="Digite uma nova tarefa">
+        <input type="number" id="inputValorTarefa" placeholder="Digite um valor">
         <button type="button" id="botaoAddTarefa">Adicionar Tarefa</button>
     </form>
-    <ul id="listaTarefas"></ul>
+    <ul id = "listaTarefas"></ul>
 
     <h1>Lista de Tabelas</h1>
     <form id="tabela">
@@ -20,10 +21,15 @@
         <input type="text" id="inputAutor" placeholder="Digite o autor">
         <input type="text" id="inputDepartamento" placeholder="Digite o departamento">
         <input type="number" id="inputImportancia" placeholder="Digite a importância (1-10)">
+        <input type="number" id="inputDuracao" placeholder="Digite os dias de duração">
+        <input type="number" id="inputValorTabela" placeholder="Digite um valor">
         <button type="button" id="botaoAddTabela">Adicionar Tabela</button>
+
+        <button type="button" id="botaoOrdenaTabelas">Filtrar</button>
+        
     </form>
     
-    <ul id="listaTabelas"></ul>
+    <ul id = "listaTabelas"></ul>
 
     <script src = "script.js"></script>
 
