@@ -1,38 +1,3 @@
-///////////////////////////////////////////////////////////////////////////////////////////
-
-function addTarefa() {
-    const inputTarefa = document.getElementById('inputTarefa');
-    const textoTarefa = inputTarefa.value.trim();
-    const listaTarefas = document.getElementById('listaTarefas');
-
-    if (textoTarefa !== '') {
-        const novaTarefa = document.createElement('li');
-        novaTarefa.textContent = textoTarefa;
-
-        const inputValorTarefa = document.getElementById('inputValorTarefa');
-        const valorTarefa = inputValorTarefa.value.trim();
-
-        const textoValor = document.createElement('li');
-        textoValor.textContent = `Valor: R$${valorTarefa},00`;
-
-        const botaoExcluir = document.createElement('button');
-        botaoExcluir.textContent = '🗑️';
-        botaoExcluir.classList.add('botao-excluir');
-        botaoExcluir.addEventListener('click', () => {
-            listaTarefas.removeChild(novaTarefa);
-        });
-
-        novaTarefa.appendChild(textoValor);
-        novaTarefa.appendChild(botaoExcluir);
-       
-        listaTarefas.appendChild(novaTarefa);
-        inputTarefa.value = '';
-        inputValorTarefa.value = '';
-    }
-}
-const botaoAddTarefa = document.getElementById('botaoAddTarefa');
-botaoAddTarefa.addEventListener('click', addTarefa);
-
 ///////////////////////////////////////////////////////////////////////////////////
 
 function addTabela() {
@@ -89,24 +54,10 @@ botaoAddTabela.addEventListener('click', addTabela);
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 function ordenarTabelas() {
-    const listaTabelas = document.getElementById('listaTabelas');
-    const tabelas = Array.from(listaTabelas.children);
 
-    tabelas.sort((a, b) => {
-        const importanciaA = parseInt(a.querySelector('p strong:contains("Importância:")').nextSibling.textContent.trim());
-        const importanciaB = parseInt(b.querySelector('p strong:contains("Importância:")').nextSibling.textContent.trim());
-        return importanciaB - importanciaA;
-    });
-
-    listaTabelas.innerHTML = ''; 
-
-    tabelas.forEach(tabela => {
-        listaTabelas.appendChild(tabela);
-    });
 }
-const botaoOrdenaTabelas = document.getElementById('botaoOrdenarTabelas');
-botaoOrdenaTabelas.textContent = "⚠️";
-botaoOrdenaTabelas.addEventListener('click', ordenarTabelas);
+const botaoFiltro = document.getElementById('botaoOrdenaTabelas');
+botaoFiltro.addEventListener('click', ordenarTabelas);
 
 
 
